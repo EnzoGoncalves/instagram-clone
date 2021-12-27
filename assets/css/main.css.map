@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "main.scss",
+        "_config.scss",
+        "_global.scss",
+        "_media-querie.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
