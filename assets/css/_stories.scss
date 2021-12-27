@@ -1,0 +1,48 @@
+#stories {
+    margin: 0 .5px;
+    padding: 1rem .5rem .75rem;
+    border: 1px solid #dbdbdb;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    overflow-x: scroll;
+
+    @include flex-center(false);
+    gap: 1.5rem;
+
+    .user {
+        cursor: pointer;
+    }
+
+    .image-box {
+        height: 60px;
+        width: 60px;
+        position: relative;
+        border-radius: 50%;
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 113%;
+            height: 113%;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #f89b4f, #c92e8e);
+        }
+
+        img {
+            width: 60px;
+            height: 60px;
+            outline: 2px solid white;
+            border-radius: 50%;
+        }
+    }
+
+    p {
+        font: 400 .70rem $text-font;
+        text-align: center;
+        padding-top: .5rem;
+    }
+}

@@ -22,3 +22,17 @@ i:active {
     opacity: .5;
 }
 
+.user-border {
+    // border-radius: 50%;
+    position: relative;
+}
+
+.user-border::before {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 0;
+    width: 10%;
+    height: 10%;
+    background-color: red;
+}
