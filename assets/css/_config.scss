@@ -5,3 +5,16 @@ $text-color: #262626;
 $icon-color: #383838;
 $grey-color: #8E8E8E;
 $background-insta-color: #fafafa;
+
+$header-height: 60px;
+
+@mixin flex-center($justify-content) {
+    display: flex;
+    align-items: center;
+
+    @if $justify-content == true {
+        justify-content: center;
+    } else {
+        justify-content: inherit;
+    }
+}

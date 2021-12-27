@@ -1,0 +1,34 @@
+#header {
+    height: $header-height; 
+
+    .nav {
+        height: $header-height;
+
+        @include flex-center(false);
+        justify-content: space-between;
+        padding-left: .75rem;
+        padding-right: .75rem;
+
+        img {
+            margin-right: .75rem
+        }
+
+        .icons {
+            @include flex-center(false);
+            justify-content: space-around;
+            flex-grow: 1;
+
+            img {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                margin-right: 0;
+            }
+
+            i {
+                font-size: 1.35rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
