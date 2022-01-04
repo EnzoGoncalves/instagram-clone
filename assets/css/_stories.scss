@@ -1,48 +1,70 @@
+#stories::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+
 #stories {
-    margin: 0 .5px;
-    padding: 1rem .5rem .75rem;
+    padding: 1rem .5rem .75rem 1rem;
+    position: relative;
+    margin-top: $header-height;
     border: 1px solid #dbdbdb;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
+    border-top: none;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
     overflow-x: scroll;
+    background-color: white;
+    scroll-behavior: smooth;
 
     @include flex-center(false);
-    gap: 1.5rem;
+    gap: 1.35rem;
 
     .user {
         cursor: pointer;
+        
     }
 
-    .image-box {
-        height: 60px;
-        width: 60px;
-        position: relative;
-        border-radius: 50%;
-
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 113%;
-            height: 113%;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #f89b4f, #c92e8e);
-        }
-
+    .colored-image-box {
+        @include colored-image-box(60, 8);
+    
+        
         img {
             width: 60px;
             height: 60px;
             outline: 2px solid white;
             border-radius: 50%;
+            position: relative;
         }
     }
 
     p {
-        font: 400 .70rem $text-font;
+        font-size: .70rem;
         text-align: center;
         padding-top: .5rem;
     }
+}
+
+
+.stories-btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 10;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    font-size: 1.25rem;
+}
+
+.stories-btn-left {
+    left: 5%;
+}
+
+.stories-btn-right {
+    right: 5%;
 }

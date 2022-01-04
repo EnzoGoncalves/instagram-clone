@@ -1,0 +1,154 @@
+#posts {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: $background-insta-color;
+}
+
+.post {
+    background-color: white;
+
+    .user {
+        @include flex-center(false);
+        justify-content: space-between;
+        height: 60px;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        
+        .image-name-user {
+            @include flex-center(false);
+            gap: 1rem;
+    
+    
+            .colored-image-box {
+                @include colored-image-box(32, 5)
+            }
+    
+    
+            img {
+                width: 32px;
+                height: 32px;
+                position: relative;
+                outline: 1px solid white;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+    
+            .userName {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+    
+                p {
+                    font-weight: 500;
+                    font-size: .9rem;
+                    cursor: pointer;
+    
+                    &:nth-child(1):hover {
+                        text-decoration: underline;
+                    }
+    
+                    &:nth-child(2) {
+                        padding-top: .25rem;
+                        font-size: .70rem;
+                        font-weight: 400;
+                    }
+                }
+            }
+    
+    
+        }
+    
+        .fa-ellipsis-h {
+            justify-self: flex-end;
+            font-size: 1rem;
+            opacity: .9;
+        }
+    
+        i {
+            font-size: 1.5rem;
+        }
+    
+    }
+}
+
+    
+.post-image {
+    width: 100%;
+    height: auto;
+}
+
+.interaction {
+    @include flex-center(false);
+    justify-content: space-between;
+    
+    padding: .5rem 1.25rem;
+
+    div {
+        @include flex-center(false);
+        gap: 1.25rem;
+
+        i.fas {
+            color: rgb(237, 73, 86);
+        }       
+    }
+
+    i {
+        font-size: 1.35rem;
+        transition: color .1s ease-in;
+
+        &:hover {
+            opacity: .5;
+        }
+
+        &.fas{
+            color: $text-color;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.comments {
+    padding: .25rem 1.25rem;
+
+    .likes {
+        font-weight: 500;
+        letter-spacing: 0px;
+        padding-bottom: .75rem;
+    }
+
+    .user-comment {
+        padding-bottom: .5rem;
+
+        span {
+            font-weight: 500;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .see-all-comments {
+        padding-bottom: .75rem;
+        font-size: .9rem;
+        opacity: .75;
+        cursor: pointer;
+
+        &:active {
+            opacity: .5;
+        }
+    }
+
+    .post-time {
+        font-size: .7rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        opacity: .7;
+    }   
+}

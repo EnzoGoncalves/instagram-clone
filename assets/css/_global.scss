@@ -16,23 +16,46 @@ html {
 
 body {
     background-color: $background-insta-color;
+    font-family: $text-font;
+}
+
+p {
+    color: $text-color;
+}
+
+i {
+    cursor: pointer;
+    color: $text-color;
 }
 
 i:active {
-    opacity: .5;
+    opacity: .6;
 }
 
-.user-border {
-    // border-radius: 50%;
+@mixin colored-image-box($boxSize, $plusSize) {
+    width: #{$boxSize}px;
+    height: #{$boxSize}px;
+    border-radius: 50%;
     position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% + #{$plusSize}px);
+        height: calc(100% + #{$plusSize}px);
+        border-radius: 50%;
+        background: linear-gradient(45deg, #f89b4f, #c92e8e);
+    }
 }
 
-.user-border::before {
-    content: '';
-    position: absolute;
-    right: -10px;
-    top: 0;
-    width: 10%;
-    height: 10%;
-    background-color: red;
+.text-active-opacity {
+    cursor: pointer;
+
+    &:active {
+        cursor: pointer;
+        opacity: .7;
+    }
 }
