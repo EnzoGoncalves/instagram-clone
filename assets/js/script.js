@@ -14,27 +14,68 @@ function maxLetters() {
     }
 }
 
+// Função de scroll para os lados nos stories
+function storiesScroll() {
+    const stories = document.querySelector('#stories');
+
+    const storiesWidth = stories.offsetWidth;
+    
+    const storiesScrollWidth = stories.scrollWidth;
+    
+    let storiesCurrentXScroll = stories.scrollLeft;
+    
+    const storiesBtnRight = document.querySelector('.stories-btn-right');
+    const storiesBtnLeft = document.querySelector('.stories-btn-left');
+    
+    stories.addEventListener('scroll', function() {
+        if(storiesCurrentXScroll + storiesWidth >= storiesScrollWidth) {
+            storiesBtnRight.classList.add('stories-btn-disappear');
+        } else {
+            storiesBtnRight.classList.remove('stories-btn-disappear');
+        }
+    
+        if(storiesCurrentXScroll <= 0) {
+            storiesBtnLeft.classList.add('stories-btn-disappear'); 
+        } else {
+            storiesBtnLeft.classList.remove('stories-btn-disappear');
+        }
+    });
+    
+    storiesBtnRight.addEventListener('click', function() {
+        stories.scrollTo(storiesCurrentXScroll + storiesWidth - 75, 0);
+    
+        storiesCurrentXScroll += storiesWidth - 75;
+    
+        if(storiesCurrentXScroll + storiesWidth >= storiesScrollWidth) {
+            stories.scrollTo(storiesScrollWidth - storiesWidth, 0)
+            storiesCurrentXScroll = storiesScrollWidth - storiesWidth;
+        }
+    
+        console.log(storiesCurrentXScroll);
+    });
+    
+    storiesBtnLeft.addEventListener('click', function() {
+        stories.scrollTo(storiesCurrentXScroll - storiesWidth  + 75, 0);
+    
+        storiesCurrentXScroll -= storiesWidth - 75;
+    
+        if(storiesCurrentXScroll <= 0) {
+            stories.scrollTo(0 , 0)
+            storiesCurrentXScroll = 0;
+        }
+    
+        console.log(storiesCurrentXScroll);
+    });
+}
+
+// Função de colocar os botões de scroll dos stories no lugar dos stories
+window.onload = function() {
+    const storiesHeight = document.querySelector('#stories').offsetHeight;
+    const storiesButtonDiv = document.querySelector('.stories-buttons-div');
+    
+    storiesButtonDiv.style.height = storiesHeight + 'px';
+}
+
+
 maxLetters();
-
-const postHeartIcon = document.querySelector('#posts .interaction div').childNodes[1];
-const savePostIcon = document.querySelector('#posts .interaction .fa-bookmark');
-
-postHeartIcon.addEventListener('click', function(e) {
-    postHeartIcon.classList.toggle('far');
-    postHeartIcon.classList.toggle('fas');
-});
-
-savePostIcon.addEventListener('click', function(e) {
-    savePostIcon.classList.toggle('far');
-    savePostIcon.classList.toggle('fas');
-});
-
-
-
-const storiesWidth = document.querySelector('#stories').offsetWidth;
-
-let i = 1;
-document.querySelector('.stories-btn-right').addEventListener('click', function(){
-    document.querySelector('#stories').scrollTo((i * storiesWidth) - 85, 0);
-    i += 1;
-})
+storiesScroll();

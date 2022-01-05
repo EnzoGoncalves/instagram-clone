@@ -163,7 +163,14 @@ i:active {
   padding-top: .5rem;
 }
 
-.stories-btn {
+.stories-buttons-div {
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  left: 0;
+}
+
+.stories-buttons-div .stories-btn {
   width: 30px;
   height: 30px;
   display: -webkit-box;
@@ -184,14 +191,21 @@ i:active {
   color: black;
   border-radius: 50%;
   font-size: 1.25rem;
+  visibility: visible;
+  opacity: 1;
 }
 
-.stories-btn-left {
+.stories-buttons-div .stories-btn-left {
   left: 5%;
 }
 
-.stories-btn-right {
+.stories-buttons-div .stories-btn-right {
   right: 5%;
+}
+
+.stories-buttons-div .stories-btn-disappear {
+  visibility: hidden;
+  opacity: 0;
 }
 
 #posts {
