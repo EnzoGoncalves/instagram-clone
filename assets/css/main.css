@@ -44,18 +44,19 @@ i:active {
 }
 
 #header {
-  height: 60px;
+  height: 45px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
   background-color: white;
-  border-bottom: 1px solid #dbdbdb;
+  -webkit-box-shadow: 0px .5px 1px .8px #dbdbdb;
+          box-shadow: 0px .5px 1px .8px #dbdbdb;
 }
 
 #header .nav {
-  height: 60px;
+  height: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,39 +66,21 @@ i:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-left: .75rem;
-  padding-right: .75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 #header .nav img {
-  margin-right: .75rem;
-}
-
-#header .nav .icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-#header .nav .icons img {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  margin-right: 0;
   cursor: pointer;
+  padding: .2rem;
 }
 
-#header .nav .icons i {
-  font-size: 1.35rem;
-  cursor: pointer;
+#header .nav img:nth-child(1) {
+  width: 2rem;
+}
+
+#header .nav img:nth-child(3) {
+  width: 1.8rem;
 }
 
 #stories::-webkit-scrollbar {
@@ -108,13 +91,13 @@ i:active {
 #stories {
   padding: 1rem .5rem .75rem 1rem;
   position: relative;
-  margin-top: 60px;
-  border: 1px solid #dbdbdb;
+  margin-top: 45px;
   border-top: none;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-bottom: 1px solid #dbdbdb;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   overflow-x: scroll;
-  background-color: white;
+  background-color: #fafafa;
   scroll-behavior: smooth;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,7 +149,7 @@ i:active {
 .stories-buttons-div {
   width: 100%;
   position: absolute;
-  top: 60px;
+  top: 45px;
   left: 0;
 }
 
@@ -209,7 +192,7 @@ i:active {
 }
 
 #posts {
-  padding-top: 1rem;
+  margin-bottom: calc(45px + 35px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -217,7 +200,6 @@ i:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1rem;
   background-color: #fafafa;
 }
 
@@ -238,6 +220,7 @@ i:active {
   height: 60px;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+  border-bottom: 1px solid #dbdbdb42;
 }
 
 .post .user .image-name-user {
@@ -270,13 +253,35 @@ i:active {
   background: linear-gradient(45deg, #f89b4f, #c92e8e);
 }
 
-.post .user .image-name-user img {
+.post .user .image-name-user .colored-image-box img {
   width: 32px;
   height: 32px;
   position: relative;
   outline: 1px solid white;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.post .user .image-name-user .users-post {
+  position: relative;
+  width: 40px;
+}
+
+.post .user .image-name-user .users-post img {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.post .user .image-name-user .users-post img:nth-child(1) {
+  top: -20px;
+  left: 0px;
+}
+
+.post .user .image-name-user .users-post img:nth-child(2) {
+  left: 10px;
+  top: -10px;
 }
 
 .post .user .image-name-user .userName {
@@ -293,19 +298,23 @@ i:active {
 }
 
 .post .user .image-name-user .userName p {
-  font-weight: 500;
+  font-weight: 400;
   font-size: .9rem;
   cursor: pointer;
-}
-
-.post .user .image-name-user .userName p:nth-child(1):hover {
-  text-decoration: underline;
 }
 
 .post .user .image-name-user .userName p:nth-child(2) {
   padding-top: .25rem;
   font-size: .70rem;
   font-weight: 400;
+}
+
+.post .user .image-name-user .userName p span {
+  font-weight: 600;
+}
+
+.post .user .image-name-user .userName p span:hover {
+  text-decoration: underline;
 }
 
 .post .user .fa-ellipsis-h {
@@ -318,12 +327,12 @@ i:active {
   font-size: 1.5rem;
 }
 
-.post-image {
+.post .post-image {
   width: 100%;
   height: auto;
 }
 
-.interaction {
+.post .interaction {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,7 +345,7 @@ i:active {
   padding: .5rem 1.25rem;
 }
 
-.interaction div {
+.post .interaction div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -346,66 +355,143 @@ i:active {
   gap: 1.25rem;
 }
 
-.interaction div i.fas {
+.post .interaction div i.fas {
   color: #ed4956;
 }
 
-.interaction i {
+.post .interaction i {
   font-size: 1.35rem;
   -webkit-transition: color .1s ease-in;
   transition: color .1s ease-in;
 }
 
-.interaction i:hover {
+.post .interaction i:hover {
   opacity: .5;
 }
 
-.interaction i.fas {
+.post .interaction i.fas {
   color: #262626;
 }
 
-.interaction i.fas:hover {
+.post .interaction i.fas:hover {
   opacity: 1;
 }
 
-.comments {
+.post .comments {
   padding: .25rem 1.25rem;
 }
 
-.comments .likes {
+.post .comments .likes {
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0px;
   padding-bottom: .75rem;
 }
 
-.comments .user-comment {
+.post .comments .user-comment {
+  font-size: .95rem;
   padding-bottom: .5rem;
 }
 
-.comments .user-comment span {
+.post .comments .user-comment span {
   font-weight: 500;
   cursor: pointer;
+  padding-right: .35rem;
 }
 
-.comments .user-comment span:hover {
+.post .comments .user-comment span:hover {
   text-decoration: underline;
 }
 
-.comments .see-all-comments {
+.post .comments .see-all-comments {
   padding-bottom: .75rem;
   font-size: .9rem;
   opacity: .75;
   cursor: pointer;
 }
 
-.comments .see-all-comments:active {
+.post .comments .see-all-comments:active {
   opacity: .5;
 }
 
-.comments .post-time {
+.post .comments .post-time {
   font-size: .7rem;
   font-weight: 400;
   text-transform: uppercase;
   opacity: .7;
+}
+
+#navegation-footer {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  border-top: 1px solid #dbdbdb;
+}
+
+#navegation-footer div {
+  padding: .2rem .25rem .2rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: 2fr auto;
+      grid-template-columns: 2fr auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+#navegation-footer div p {
+  padding: 0;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  cursor: pointer;
+  color: #0094f6;
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+#navegation-footer div i {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+#navegation-footer .nav {
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1rem;
+}
+
+#navegation-footer .nav img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+#navegation-footer .nav i {
+  font-size: 1.45rem;
+}
+
+#navegation-footer .nav i:first-child {
+  font-size: 2rem;
+}
+
+#navegation-footer .nav i:nth-child(2) {
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 /*# sourceMappingURL=main.css.map */

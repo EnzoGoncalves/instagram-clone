@@ -6,36 +6,26 @@
     width: 100%;
     z-index: 100;
     background-color: white;
-    border-bottom: 1px solid #dbdbdb;
+    box-shadow: 0px .5px 1px .8px #dbdbdb;
 
     .nav {
         height: $header-height;
 
         @include flex-center(false);
         justify-content: space-between;
-        padding-left: .75rem;
-        padding-right: .75rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
 
         img {
-            margin-right: .75rem
-        }
+            cursor: pointer;
+            padding: .2rem;
 
-        .icons {
-            @include flex-center(false);
-            justify-content: space-around;
-            flex-grow: 1;
-
-            img {
-                width: 25px;
-                height: 25px;
-                border-radius: 50%;
-                margin-right: 0;
-                cursor: pointer;
+            &:nth-child(1) {
+                width: 2rem;
             }
 
-            i {
-                font-size: 1.35rem;
-                cursor: pointer;
+            &:nth-child(3) {
+                width: 1.8rem;
             }
         }
     }

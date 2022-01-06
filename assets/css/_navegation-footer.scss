@@ -1,0 +1,58 @@
+#navegation-footer {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    border-top: 1px solid #dbdbdb;
+
+    div {
+        padding: .2rem .25rem .2rem 0;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 2fr auto;
+        align-items: center;
+        border-bottom: 1px solid #dbdbdb;
+        
+
+        p {
+            padding: 0;
+            justify-self: center;
+            cursor: pointer;
+            color: $blue-color;
+            font-size: .9rem;
+            font-weight: 700;
+        }
+
+        i {
+            width: min-content;
+            justify-self: end;
+        }
+    }
+
+    .nav {
+        height: 45px;
+        @include flex-center(false);
+        justify-content: space-between;
+        padding: 0 1rem;
+
+        img {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+        }
+    
+        i {
+            font-size: 1.45rem;
+
+            &:first-child {
+                font-size: 2rem;
+            }
+
+            &:nth-child(2) {
+                font-size: 1.8rem;
+                font-weight: 500;
+            }
+        }
+    }
+}
