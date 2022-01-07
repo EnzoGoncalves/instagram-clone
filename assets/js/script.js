@@ -42,29 +42,25 @@ function storiesScroll() {
     });
     
     storiesBtnRight.addEventListener('click', function() {
-        stories.scrollTo(storiesCurrentXScroll + storiesWidth - 75, 0);
+        stories.scrollTo(storiesCurrentXScroll + 350, 0);
     
-        storiesCurrentXScroll += storiesWidth - 75;
+        storiesCurrentXScroll += 350;
     
         if(storiesCurrentXScroll + storiesWidth >= storiesScrollWidth) {
             stories.scrollTo(storiesScrollWidth - storiesWidth, 0)
             storiesCurrentXScroll = storiesScrollWidth - storiesWidth;
         }
-    
-        console.log(storiesCurrentXScroll);
     });
     
     storiesBtnLeft.addEventListener('click', function() {
-        stories.scrollTo(storiesCurrentXScroll - storiesWidth  + 75, 0);
+        stories.scrollTo(storiesCurrentXScroll - 350, 0);
     
-        storiesCurrentXScroll -= storiesWidth - 75;
+        storiesCurrentXScroll -= 350;
     
         if(storiesCurrentXScroll <= 0) {
             stories.scrollTo(0 , 0)
             storiesCurrentXScroll = 0;
         }
-    
-        console.log(storiesCurrentXScroll);
     });
 }
 
@@ -74,6 +70,25 @@ window.onload = function() {
     const storiesButtonDiv = document.querySelector('.stories-buttons-div');
     
     storiesButtonDiv.style.height = storiesHeight + 'px';
+}
+
+
+const postHeartIcon = document.querySelectorAll('#posts .interaction div .fa-heart');
+const savePostIcon = document.querySelectorAll('#posts .interaction .fa-bookmark');
+
+for(const heartIcon of postHeartIcon) {
+    heartIcon.addEventListener('click', function() {
+        heartIcon.classList.toggle('far');
+        heartIcon.classList.toggle('fas');
+    });
+}
+
+
+for(const saveIcon of savePostIcon) {
+    saveIcon.addEventListener('click', function() {
+        saveIcon.classList.toggle('far');
+        saveIcon.classList.toggle('fas');
+    });
 }
 
 

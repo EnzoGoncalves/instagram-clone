@@ -7,6 +7,7 @@
 
 .post {
     background-color: white;
+    padding-bottom: 2rem;
 
     .user {
         @include flex-center(false);
@@ -15,12 +16,11 @@
         padding-left: 1.25rem;
         padding-right: 1.25rem;
         border-bottom: 1px solid #dbdbdb42;
-        
+
         .image-name-user {
             @include flex-center(false);
             gap: 1rem;
-    
-    
+
             .colored-image-box {
                 @include colored-image-box(32, 5);
 
@@ -37,7 +37,7 @@
             .users-post {
                 position: relative;
                 width: 40px;
-            
+
                 img {
                     width: 27px;
                     height: 27px;
@@ -60,16 +60,15 @@
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
-    
+
                 p {
                     font-weight: 400;
-                    font-size: .9rem;
+                    font-size: 0.9rem;
                     cursor: pointer;
-                    
-    
+
                     &:nth-child(2) {
-                        padding-top: .25rem;
-                        font-size: .70rem;
+                        padding-top: 0.25rem;
+                        font-size: 0.7rem;
                         font-weight: 400;
                     }
 
@@ -81,20 +80,17 @@
                     }
                 }
             }
-    
-    
         }
-    
+
         .fa-ellipsis-h {
             justify-self: flex-end;
             font-size: 1rem;
-            opacity: .9;
+            opacity: 0.9;
         }
-    
+
         i {
             font-size: 1.5rem;
         }
-    
     }
 
     .post-image {
@@ -105,29 +101,29 @@
     .interaction {
         @include flex-center(false);
         justify-content: space-between;
-        
-        padding: .5rem 1.25rem;
-    
+
+        padding: 0.5rem 1.25rem;
+
         div {
             @include flex-center(false);
             gap: 1.25rem;
-    
+
             i.fas {
                 color: rgb(237, 73, 86);
-            }       
+            }
         }
-    
+
         i {
             font-size: 1.35rem;
-            transition: color .1s ease-in;
-    
+            transition: color 0.1s ease-in;
+
             &:hover {
-                opacity: .5;
+                opacity: 0.5;
             }
-    
-            &.fas{
+
+            &.fas {
                 color: $text-color;
-    
+
                 &:hover {
                     opacity: 1;
                 }
@@ -136,53 +132,46 @@
     }
 
     .comments {
-        padding: .25rem 1.25rem;
-    
+        padding: 0.25rem 1.25rem;
+
         .likes {
-            font-size: 1rem;
+            font-size: .9rem;
             font-weight: 500;
             letter-spacing: 0px;
-            padding-bottom: .75rem;
+            padding-bottom: 0.75rem;
         }
-    
+
         .user-comment {
-            font-size: .95rem;
-            padding-bottom: .5rem;
-    
+            font-size: 0.95rem;
+            padding-bottom: 0.5rem;
+
             span {
                 font-weight: 500;
                 cursor: pointer;
-                padding-right: .35rem;
-    
+                padding-right: 0.35rem;
+
                 &:hover {
                     text-decoration: underline;
                 }
             }
         }
-    
+
         .see-all-comments {
-            padding-bottom: .75rem;
-            font-size: .9rem;
-            opacity: .75;
+            padding-bottom: 0.75rem;
+            font-size: 0.9rem;
+            opacity: 0.75;
             cursor: pointer;
-    
+
             &:active {
-                opacity: .5;
+                opacity: 0.5;
             }
         }
-    
+
         .post-time {
-            font-size: .7rem;
+            font-size: 0.7rem;
             font-weight: 400;
             text-transform: uppercase;
-            opacity: .7;
-        }   
+            opacity: 0.7;
+        }
     }
 }
-
-    
-
-
-
-
-

@@ -89,11 +89,11 @@ i:active {
 }
 
 #stories {
-  padding: 1rem .5rem .75rem 1rem;
+  padding: 1rem 0.5rem 0.75rem 1rem;
   position: relative;
   margin-top: 45px;
   border-top: none;
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb42;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
   overflow-x: scroll;
@@ -113,8 +113,8 @@ i:active {
 }
 
 #stories .colored-image-box {
-  width: 60px;
-  height: 60px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   position: relative;
 }
@@ -133,24 +133,25 @@ i:active {
 }
 
 #stories .colored-image-box img {
-  width: 60px;
-  height: 60px;
+  width: 54px;
+  height: 54px;
   outline: 2px solid white;
   border-radius: 50%;
   position: relative;
 }
 
 #stories p {
-  font-size: .70rem;
+  font-size: 0.7rem;
   text-align: center;
-  padding-top: .5rem;
+  padding-top: 0.5rem;
 }
 
 .stories-buttons-div {
   width: 100%;
   position: absolute;
   top: 45px;
-  left: 0;
+  z-index: 11;
+  display: none;
 }
 
 .stories-buttons-div .stories-btn {
@@ -169,21 +170,21 @@ i:active {
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  z-index: 10;
+  z-index: 11;
   background-color: white;
   color: black;
-  border-radius: 50%;
   font-size: 1.25rem;
-  visibility: visible;
-  opacity: 1;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 5px #272727ab;
+          box-shadow: 1px 1px 5px #272727ab;
 }
 
 .stories-buttons-div .stories-btn-left {
-  left: 5%;
+  left: 4%;
 }
 
 .stories-buttons-div .stories-btn-right {
-  right: 5%;
+  right: 4%;
 }
 
 .stories-buttons-div .stories-btn-disappear {
@@ -205,6 +206,7 @@ i:active {
 
 .post {
   background-color: white;
+  padding-bottom: 2rem;
 }
 
 .post .user {
@@ -299,13 +301,13 @@ i:active {
 
 .post .user .image-name-user .userName p {
   font-weight: 400;
-  font-size: .9rem;
+  font-size: 0.9rem;
   cursor: pointer;
 }
 
 .post .user .image-name-user .userName p:nth-child(2) {
-  padding-top: .25rem;
-  font-size: .70rem;
+  padding-top: 0.25rem;
+  font-size: 0.7rem;
   font-weight: 400;
 }
 
@@ -320,7 +322,7 @@ i:active {
 .post .user .fa-ellipsis-h {
   justify-self: flex-end;
   font-size: 1rem;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .post .user i {
@@ -342,7 +344,7 @@ i:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: .5rem 1.25rem;
+  padding: 0.5rem 1.25rem;
 }
 
 .post .interaction div {
@@ -361,12 +363,12 @@ i:active {
 
 .post .interaction i {
   font-size: 1.35rem;
-  -webkit-transition: color .1s ease-in;
-  transition: color .1s ease-in;
+  -webkit-transition: color 0.1s ease-in;
+  transition: color 0.1s ease-in;
 }
 
 .post .interaction i:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .post .interaction i.fas {
@@ -378,25 +380,25 @@ i:active {
 }
 
 .post .comments {
-  padding: .25rem 1.25rem;
+  padding: 0.25rem 1.25rem;
 }
 
 .post .comments .likes {
-  font-size: 1rem;
+  font-size: .9rem;
   font-weight: 500;
   letter-spacing: 0px;
-  padding-bottom: .75rem;
+  padding-bottom: 0.75rem;
 }
 
 .post .comments .user-comment {
-  font-size: .95rem;
-  padding-bottom: .5rem;
+  font-size: 0.95rem;
+  padding-bottom: 0.5rem;
 }
 
 .post .comments .user-comment span {
   font-weight: 500;
   cursor: pointer;
-  padding-right: .35rem;
+  padding-right: 0.35rem;
 }
 
 .post .comments .user-comment span:hover {
@@ -404,21 +406,21 @@ i:active {
 }
 
 .post .comments .see-all-comments {
-  padding-bottom: .75rem;
-  font-size: .9rem;
-  opacity: .75;
+  padding-bottom: 0.75rem;
+  font-size: 0.9rem;
+  opacity: 0.75;
   cursor: pointer;
 }
 
 .post .comments .see-all-comments:active {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .post .comments .post-time {
-  font-size: .7rem;
+  font-size: 0.7rem;
   font-weight: 400;
   text-transform: uppercase;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 #navegation-footer {
@@ -431,7 +433,7 @@ i:active {
 }
 
 #navegation-footer div {
-  padding: .2rem .25rem .2rem 0;
+  padding: 0.2rem 0.25rem 0.2rem 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr;
@@ -450,7 +452,7 @@ i:active {
       justify-self: center;
   cursor: pointer;
   color: #0094f6;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
@@ -493,5 +495,38 @@ i:active {
 #navegation-footer .nav i:nth-child(2) {
   font-size: 1.8rem;
   font-weight: 500;
+}
+
+@media (min-width: 650px) {
+  #stories,
+  #posts {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3px;
+  }
+  #stories {
+    margin-top: 4.5rem;
+    margin-bottom: 1.5rem;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+  }
+  .stories-buttons-div {
+    display: block;
+    width: 600px;
+    left: 50%;
+    top: 4.5rem;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    visibility: visible;
+    opacity: 1;
+  }
+  #posts {
+    gap: 1rem;
+  }
+  #posts .post {
+    border: 1px solid #dbdbdb;
+    padding-bottom: .5rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

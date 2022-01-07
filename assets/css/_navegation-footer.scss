@@ -4,23 +4,22 @@
     position: fixed;
     bottom: 0;
     background-color: white;
-    border-top: 1px solid #dbdbdb;
+    border-top: 1px solid $grey-border-color;
 
     div {
-        padding: .2rem .25rem .2rem 0;
+        padding: 0.2rem 0.25rem 0.2rem 0;
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: 2fr auto;
         align-items: center;
-        border-bottom: 1px solid #dbdbdb;
-        
+        border-bottom: 1px solid $grey-border-color;
 
         p {
             padding: 0;
             justify-self: center;
             cursor: pointer;
             color: $blue-color;
-            font-size: .9rem;
+            font-size: 0.9rem;
             font-weight: 700;
         }
 
@@ -41,7 +40,7 @@
             height: 25px;
             border-radius: 50%;
         }
-    
+
         i {
             font-size: 1.45rem;
 

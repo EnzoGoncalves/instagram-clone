@@ -4,11 +4,11 @@
 }
 
 #stories {
-    padding: 1rem .5rem .75rem 1rem;
+    padding: 1rem 0.5rem 0.75rem 1rem;
     position: relative;
     margin-top: $header-height;
     border-top: none;
-    border-bottom: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb42;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
     overflow-x: scroll;
@@ -20,16 +20,14 @@
 
     .user {
         cursor: pointer;
-        
     }
 
     .colored-image-box {
-        @include colored-image-box(60, 8);
-    
-        
+        @include colored-image-box(54, 8);
+
         img {
-            width: 60px;
-            height: 60px;
+            width: 54px;
+            height: 54px;
             outline: 2px solid white;
             border-radius: 50%;
             position: relative;
@@ -37,9 +35,9 @@
     }
 
     p {
-        font-size: .70rem;
+        font-size: 0.7rem;
         text-align: center;
-        padding-top: .5rem;
+        padding-top: 0.5rem;
     }
 }
 
@@ -47,7 +45,10 @@
     width: 100%;
     position: absolute;
     top: $header-height;
-    left: 0;
+    z-index: 11;
+    display: none;
+    
+
 
     .stories-btn {
         width: 30px;
@@ -56,21 +57,20 @@
         position: absolute;
         top: 50%;
         transform: translate(0, -50%);
-        z-index: 10;
+        z-index: 11;
         background-color: white;
         color: black;
-        border-radius: 50%;
         font-size: 1.25rem;
-        visibility: visible;
-        opacity: 1;
+        border-radius: 50%;
+        box-shadow: 1px 1px 5px #272727ab;
     }
-    
+
     .stories-btn-left {
-        left: 5%;
+        left: 4%;
     }
-    
+
     .stories-btn-right {
-        right: 5%;
+        right: 4%;
     }
 
     .stories-btn-disappear {
