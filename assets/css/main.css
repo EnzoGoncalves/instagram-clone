@@ -70,17 +70,31 @@ i:active {
   padding-right: 1rem;
 }
 
-#header .nav img {
-  cursor: pointer;
-  padding: .2rem;
+#header .nav img.instagram-logo {
+  padding-left: 50px;
 }
 
-#header .nav img:nth-child(1) {
-  width: 2rem;
+#header .nav img.principal-user-image {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: none;
 }
 
-#header .nav img:nth-child(3) {
-  width: 1.8rem;
+#header .nav i {
+  font-size: 1.5rem;
+}
+
+#header .nav .icon-home, #header .nav .icon-plus-square, #header .nav .icon-compass, #header .nav .icon-heart-o {
+  display: none;
+}
+
+#header .nav .search-box {
+  display: none;
+}
+
+#header .nav .icon-messenger {
+  width: 1.5rem;
 }
 
 #stories::-webkit-scrollbar {
@@ -193,7 +207,7 @@ i:active {
 }
 
 #posts {
-  margin-bottom: calc(45px + 35px);
+  margin-bottom: calc(40px + 35px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -465,7 +479,7 @@ i:active {
 }
 
 #navegation-footer .nav {
-  height: 45px;
+  height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -485,16 +499,7 @@ i:active {
 }
 
 #navegation-footer .nav i {
-  font-size: 1.45rem;
-}
-
-#navegation-footer .nav i:first-child {
-  font-size: 2rem;
-}
-
-#navegation-footer .nav i:nth-child(2) {
-  font-size: 1.8rem;
-  font-weight: 500;
+  font-size: 1.5rem;
 }
 
 @media (min-width: 650px) {

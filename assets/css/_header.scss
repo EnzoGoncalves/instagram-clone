@@ -17,16 +17,39 @@
         padding-right: 1rem;
 
         img {
-            cursor: pointer;
-            padding: .2rem;
-
-            &:nth-child(1) {
-                width: 2rem;
+            &.instagram-logo {
+                padding-left: 50px;
             }
 
-            &:nth-child(3) {
-                width: 1.8rem;
+            &.principal-user-image {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+
+                display: none;
             }
         }
+
+        i {
+            font-size: 1.5rem;
+        }
+
+        .icon {
+            &-home, &-plus-square , &-compass, &-heart-o {
+                display: none;
+            }
+        }
+
+        .search-box {
+            display: none;
+        }
+
+        .icon-messenger {
+            width: 1.5rem;
+        }
+
+        
+
+       
     }
 }

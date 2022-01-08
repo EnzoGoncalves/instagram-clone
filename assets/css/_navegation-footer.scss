@@ -30,7 +30,7 @@
     }
 
     .nav {
-        height: 45px;
+        height: 40px;
         @include flex-center(false);
         justify-content: space-between;
         padding: 0 1rem;
@@ -42,16 +42,7 @@
         }
 
         i {
-            font-size: 1.45rem;
-
-            &:first-child {
-                font-size: 2rem;
-            }
-
-            &:nth-child(2) {
-                font-size: 1.8rem;
-                font-weight: 500;
-            }
+            font-size: 1.5rem;
         }
     }
 }
