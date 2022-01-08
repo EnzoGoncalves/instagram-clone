@@ -371,12 +371,17 @@ i:active {
   gap: 1.25rem;
 }
 
-.post .interaction div i.fas {
+.post .interaction div i.icon-heart {
   color: #ed4956;
 }
 
+.post .interaction div i.icon-heart:hover {
+  opacity: 1;
+}
+
 .post .interaction i {
-  font-size: 1.35rem;
+  font-size: 1.5rem;
+  font-weight: 500;
   -webkit-transition: color 0.1s ease-in;
   transition: color 0.1s ease-in;
 }
@@ -385,11 +390,11 @@ i:active {
   opacity: 0.5;
 }
 
-.post .interaction i.fas {
-  color: #262626;
+.post .interaction i.icon-bookmark {
+  color: orange;
 }
 
-.post .interaction i.fas:hover {
+.post .interaction i.icon-bookmark:hover {
   opacity: 1;
 }
 

@@ -73,21 +73,18 @@ window.onload = function() {
 }
 
 
-const postHeartIcon = document.querySelectorAll('#posts .interaction div .fa-heart');
-const savePostIcon = document.querySelectorAll('#posts .interaction .fa-bookmark');
+const postHeartIcon = document.querySelectorAll('#posts .interaction div .icon-heart-o');
+const savePostIcon = document.querySelectorAll('#posts .interaction .icon-bookmark-o');
 
 for(const heartIcon of postHeartIcon) {
     heartIcon.addEventListener('click', function() {
-        heartIcon.classList.toggle('far');
-        heartIcon.classList.toggle('fas');
+        heartIcon.classList.toggle('icon-heart');
     });
 }
 
-
 for(const saveIcon of savePostIcon) {
     saveIcon.addEventListener('click', function() {
-        saveIcon.classList.toggle('far');
-        saveIcon.classList.toggle('fas');
+        saveIcon.classList.toggle('icon-bookmark');
     });
 }
 

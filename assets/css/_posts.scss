@@ -108,21 +108,26 @@
             @include flex-center(false);
             gap: 1.25rem;
 
-            i.fas {
+            i.icon-heart {
                 color: rgb(237, 73, 86);
+
+                &:hover {
+                    opacity: 1;
+                }
             }
         }
 
         i {
-            font-size: 1.35rem;
+            font-size: 1.5rem;
+            font-weight: 500;
             transition: color 0.1s ease-in;
 
             &:hover {
                 opacity: 0.5;
             }
 
-            &.fas {
-                color: $text-color;
+            &.icon-bookmark {
+                color: orange;
 
                 &:hover {
                     opacity: 1;
