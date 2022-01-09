@@ -32,24 +32,51 @@
 
         i {
             font-size: 1.5rem;
+            font-weight: 500;
         }
 
         .icon {
-            &-home, &-plus-square , &-compass, &-heart-o {
+            &-home, &-plus-square-o , &-compass, &-heart-o {
                 display: none;
             }
         }
 
         .search-box {
             display: none;
+            max-width: min-content;
+            padding: .5rem;
+            background: $background-input-color;
+            border-radius: 8px;
+
+            i {
+                font-size: 1rem;
+                color: rgb(158, 158, 158);
+            }
+
+            input {
+                max-width: min-content;
+                outline: none;
+                border: none;
+                background: $background-input-color;
+
+                &::placeholder {
+                    color: rgb(158, 158, 158);
+                }
+
+                &::-webkit-search-cancel-button {
+                    filter: grayscale(10);
+                    font-size: 1rem;
+                }
+            }
         }
 
         .icon-messenger {
             width: 1.5rem;
-        }
+            cursor: pointer;
 
-        
-
-       
+            &:active {
+                opacity: .7;
+            }
+        }       
     }
 }

@@ -1,4 +1,57 @@
 @media (min-width: 650px) {
+    #header .nav {
+        gap: 1.5rem;
+    
+        img {
+            &.instagram-logo {
+                padding-left: 0;
+            }
+
+            &.principal-user-image {
+                display: block;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+            }
+        }
+
+        
+        
+        .header-interactions {
+            @include flex-center(false);
+            justify-content: flex-end;
+            gap: 1.5rem;
+        }
+
+        .search-box {
+            max-width: 200px;
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(7, auto);
+            gap: .75rem;
+
+            input {
+                width: 160px;
+            }
+        }
+
+        i {
+            &.icon {
+                &-camera {
+                    display: none;
+                }
+
+                &-home, &-plus-square-o, &-heart-o, &-compass {
+                    display: inline;
+                }
+
+                &-plus-square-o {
+                    font-size: 1.75rem;
+                }
+            }
+        }
+    }
+
     #stories,
     #posts {
         max-width: 600px;
@@ -26,10 +79,15 @@
 
     #posts {
         gap: 1rem;
+        margin-bottom: 1.5rem;
 
         .post {
             border: 1px solid $grey-border-color;
             padding-bottom: .5rem;
         }
+    }
+
+    #navigation-footer {
+        display: none;
     }
 }
