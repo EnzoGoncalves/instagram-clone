@@ -18,7 +18,7 @@
 
         img {
             &.instagram-logo {
-                padding-left: 50px;
+                padding-top: .5rem;
             }
 
             &.principal-user-image {
@@ -43,8 +43,7 @@
 
         .search-box {
             display: none;
-            max-width: min-content;
-            padding: .5rem;
+            padding: .65rem;
             background: $background-input-color;
             border-radius: 8px;
 
@@ -54,7 +53,6 @@
             }
 
             input {
-                max-width: min-content;
                 outline: none;
                 border: none;
                 background: $background-input-color;
@@ -71,8 +69,10 @@
         }
 
         .icon-messenger {
-            width: 1.5rem;
+            width: 1.4rem;
+            max-height: 1.4rem;
             cursor: pointer;
+
 
             &:active {
                 opacity: .7;

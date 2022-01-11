@@ -1,7 +1,5 @@
 @media (min-width: 650px) {
-    #header .nav {
-        gap: 1.5rem;
-    
+    #header .nav {   
         img {
             &.instagram-logo {
                 padding-left: 0;
@@ -18,22 +16,35 @@
         
         
         .header-interactions {
-            @include flex-center(false);
-            justify-content: flex-end;
-            gap: 1.5rem;
-        }
-
-        .search-box {
-            max-width: 200px;
             display: grid;
-            align-items: center;
-            grid-template-columns: repeat(7, auto);
-            gap: .75rem;
+            grid-template-columns: 1.1fr 0.9fr;
+            grid-template-rows: auto;
+            justify-content: flex-end;
+            flex-grow: 2;
+            gap: 1.5rem;
+            padding-left: 1.5rem;
 
-            input {
-                width: 160px;
+            .search-box {
+                width: 100%;
+                max-width: 270px;
+                @include flex-center(false);
+                flex-grow: 2;
+                gap: .75rem;
+                justify-self: flex-end;
+
+                input {
+                    width: 100%;
+                }
+            }
+
+            .header-icons {
+                @include flex-center(false);
+                gap: 1.35rem;
+                justify-self: center;
             }
         }
+
+        
 
         i {
             &.icon {
@@ -89,5 +100,25 @@
 
     #navigation-footer {
         display: none;
+    }
+}
+
+@media (min-width: 975px) {
+    #header .nav {
+        max-width: 975px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .header-interactions {
+            
+        
+            .search-box {
+            }
+            
+            .header-icons {
+                
+                
+            }
+        }
     }
 }
