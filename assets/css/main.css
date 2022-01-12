@@ -70,12 +70,14 @@ i:active {
 
 #header .nav img.instagram-logo {
   padding-top: .5rem;
+  cursor: pointer;
 }
 
 #header .nav img.principal-user-image {
   width: 25px;
   height: 25px;
   border-radius: 50%;
+  cursor: pointer;
   display: none;
 }
 
@@ -710,6 +712,7 @@ i:active {
   width: 25px;
   height: 25px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 #navigation-footer .nav i {
@@ -792,6 +795,7 @@ i:active {
   }
   #stories {
     margin-top: 0;
+    overflow: hidden;
   }
   .stories-btn {
     display: -webkit-box;

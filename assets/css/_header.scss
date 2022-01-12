@@ -18,13 +18,14 @@
         img {
             &.instagram-logo {
                 padding-top: .5rem;
+                cursor: pointer;
             }
 
             &.principal-user-image {
                 width: 25px;
                 height: 25px;
                 border-radius: 50%;
-
+                cursor: pointer;
                 display: none;
             }
         }
