@@ -178,19 +178,11 @@
     }
 }
 
-.stories-buttons-div {
-    width: 100%;
-    position: absolute;
-    top: -7.9rem;
-    z-index: 11;
-    display: none;
-}
-
 .stories-btn {
     width: 25px;
     height: 25px;
-    @include flex-center(true);
     position: absolute;
+    z-index: 12;
     top: -4.8rem;
     transform: translate(0, -50%);
     background-color: white;
@@ -198,6 +190,8 @@
     font-size: 1rem;
     border-radius: 50%;
     box-shadow: 1px 1px 5px #272727ab;
+    
+    display: none;
 }
 
 .stories-btn-left {
