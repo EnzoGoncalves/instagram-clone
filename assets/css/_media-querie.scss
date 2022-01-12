@@ -1,88 +1,88 @@
 @media (min-width: 650px) {
-    #header .nav {   
-        img {
-            &.instagram-logo {
-                padding-left: 0;
-            }
+    #header {
+        border-bottom: 1px solid #dbdbdb;
 
-            &.principal-user-image {
-                display: block;
-                width: 25px;
-                height: 25px;
-                border-radius: 50%;
-            }
-        }
+        .nav   {
+            img {
+                &.instagram-logo {
+                    padding-left: 0;
+                }
 
-        
-        
-        .header-interactions {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            grid-template-rows: auto;
-            justify-content: flex-end;
-            flex-grow: 2;
-            gap: 1.5rem;
-            padding-left: 1.5rem;
+                &.principal-user-image {
+                    display: block;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                }
+            }    
 
-            .search-box {
-                width: 100%;
-                max-width: 270px;
-                @include flex-center(false);
+            .header-interactions {
+                display: grid;
+                grid-template-columns: 1.1fr 0.9fr;
+                grid-template-rows: auto;
+                justify-content: flex-end;
                 flex-grow: 2;
-                gap: .75rem;
-                justify-self: flex-end;
-
-                input {
-                    width: 100%;
-                }
-            }
-
-            .header-icons {
-                @include flex-center(false);
-                gap: 1.35rem;
-                justify-self: center;
-            }
-        }
-
+                gap: 1.5rem;
+                padding-left: 1.5rem;
         
-
-        i {
-            &.icon {
-                &-camera {
-                    display: none;
+                .search-box {
+                    width: 100%;
+                    max-width: 270px;
+                    @include flex-center(false);
+                    flex-grow: 2;
+                    gap: .75rem;
+                    justify-self: flex-end;
+        
+                    input {
+                        width: 100%;
+                    }
                 }
-
-                &-home, &-plus-square-o, &-heart-o, &-compass {
-                    display: inline;
+        
+                .header-icons {
+                    @include flex-center(false);
+                    gap: 1.35rem;
+                    justify-self: flex-end;
                 }
-
-                &-plus-square-o {
-                    font-size: 1.75rem;
+            }          
+        
+            i {
+                &.icon {
+                    &-camera {
+                        display: none;
+                    }
+        
+                    &-home, &-plus-square-o, &-heart-o, &-compass {
+                        display: inline;
+                    }
+        
+                    &-plus-square-o {
+                        font-size: 1.75rem;
+                    }
                 }
             }
         }
+    }
+
+    .sp-box {
+        margin-top: 5.5rem;
     }
 
     #stories,
     #posts {
         max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
         border-radius: 3px;
     }
 
     #stories {
-        margin-top: 4.5rem;
-        margin-bottom: 1.5rem;
-        background-color: white;
-        border: 1px solid $grey-border-color;
+        margin-top: 0;
+        
     }
 
     .stories-buttons-div {
         display: block;
         width: 600px;
         left: 50%;
-        top: 4.5rem;
+        top: 5.5rem;
         transform: translate(-50%, 0);
         visibility: visible;
         opacity: 1;
@@ -105,20 +105,27 @@
 
 @media (min-width: 975px) {
     #header .nav {
-        max-width: 975px;
+        max-width: 924px;
         margin-left: auto;
         margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
 
-        .header-interactions {
-            
-        
-            .search-box {
-            }
-            
-            .header-icons {
-                
-                
-            }
-        }
+    .stories-buttons-div  {
+        left: 35%;
+    }
+
+    .sp-box {
+        max-width: 924px;
+        grid-template-columns: 600px 300px;
+        grid-template-rows: auto auto;
+        row-gap: 1.45rem;
+        grid-template-areas: 'stories user-recommendations' 'posts user-recommendations';
+        column-gap: 1.5rem;
+    }
+
+    #user-recommendations {
+        display: block;
     }
 }

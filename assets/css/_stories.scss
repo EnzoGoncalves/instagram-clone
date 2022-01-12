@@ -8,12 +8,13 @@
     position: relative;
     margin-top: $header-height;
     border-top: none;
-    border-bottom: 1px solid #dbdbdb42;
+    border: 1px solid $grey-border-color;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
     overflow-x: scroll;
-    background-color: $background-insta-color;
+    background-color: white;
     scroll-behavior: smooth;
+    grid-area: stories;
 
     @include flex-center(false);
     gap: 1.35rem;
@@ -44,10 +45,8 @@
 .stories-buttons-div {
     width: 100%;
     position: absolute;
-    top: $header-height;
     z-index: 11;
     display: none;
-    
 
 
     .stories-btn {

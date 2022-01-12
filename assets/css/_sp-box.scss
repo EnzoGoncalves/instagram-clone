@@ -1,0 +1,12 @@
+.sp-box {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 650px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    row-gap: 1.45rem;
+    grid-template-areas: 'stories' 'posts';
+    justify-content: center;
+}

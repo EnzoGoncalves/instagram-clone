@@ -1,8 +1,10 @@
 #posts {
+    width: 100%;
     margin-bottom: calc(40px + 35px);
     display: flex;
     flex-direction: column;
     background-color: $background-insta-color;
+    grid-area: posts;
 }
 
 .post {
@@ -127,7 +129,7 @@
             }
 
             &.icon-bookmark {
-                color: orange;
+                color: $text-color;
 
                 &:hover {
                     opacity: 1;
