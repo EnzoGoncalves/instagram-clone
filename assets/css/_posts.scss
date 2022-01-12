@@ -5,6 +5,7 @@
     flex-direction: column;
     background-color: $background-insta-color;
     grid-area: posts;
+    position: relative;
 }
 
 .post {
@@ -82,12 +83,6 @@
                     }
                 }
             }
-        }
-
-        .fa-ellipsis-h {
-            justify-self: flex-end;
-            font-size: 1rem;
-            opacity: 0.9;
         }
 
         i {
@@ -181,4 +176,39 @@
             opacity: 0.7;
         }
     }
+}
+
+.stories-buttons-div {
+    width: 100%;
+    position: absolute;
+    top: -7.9rem;
+    z-index: 11;
+    display: none;
+}
+
+.stories-btn {
+    width: 25px;
+    height: 25px;
+    @include flex-center(true);
+    position: absolute;
+    top: -4.8rem;
+    transform: translate(0, -50%);
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #272727ab;
+}
+
+.stories-btn-left {
+    left: 2%;
+}
+
+.stories-btn-right {
+    right: 2%;
+}
+
+.stories-btn-disappear {
+    visibility: hidden;
+    opacity: 0;
 }

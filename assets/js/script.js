@@ -19,11 +19,11 @@ function storiesScroll() {
     const stories = document.querySelector('#stories');
 
     const storiesWidth = stories.offsetWidth;
-    
+
     const storiesScrollWidth = stories.scrollWidth;
-    
+
     let storiesCurrentXScroll = stories.scrollLeft;
-    
+
     const storiesBtnRight = document.querySelector('.stories-btn-right');
     const storiesBtnLeft = document.querySelector('.stories-btn-left');
     

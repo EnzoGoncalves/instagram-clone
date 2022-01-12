@@ -185,6 +185,7 @@ i:active {
 }
 
 #stories .user {
+  position: relative;
   cursor: pointer;
 }
 
@@ -222,51 +223,6 @@ i:active {
   padding-top: 0.5rem;
 }
 
-.stories-buttons-div {
-  width: 100%;
-  position: absolute;
-  z-index: 11;
-  display: none;
-}
-
-.stories-buttons-div .stories-btn {
-  width: 30px;
-  height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  z-index: 11;
-  background-color: white;
-  color: black;
-  font-size: 1.25rem;
-  border-radius: 50%;
-  -webkit-box-shadow: 1px 1px 5px #272727ab;
-          box-shadow: 1px 1px 5px #272727ab;
-}
-
-.stories-buttons-div .stories-btn-left {
-  left: 4%;
-}
-
-.stories-buttons-div .stories-btn-right {
-  right: 4%;
-}
-
-.stories-buttons-div .stories-btn-disappear {
-  visibility: hidden;
-  opacity: 0;
-}
-
 #posts {
   width: 100%;
   margin-bottom: calc(40px + 35px);
@@ -281,6 +237,7 @@ i:active {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: posts;
+  position: relative;
 }
 
 .post {
@@ -398,12 +355,6 @@ i:active {
   text-decoration: underline;
 }
 
-.post .user .fa-ellipsis-h {
-  justify-self: flex-end;
-  font-size: 1rem;
-  opacity: 0.9;
-}
-
 .post .user i {
   font-size: 1.5rem;
 }
@@ -505,6 +456,51 @@ i:active {
   font-weight: 400;
   text-transform: uppercase;
   opacity: 0.7;
+}
+
+.stories-buttons-div {
+  width: 100%;
+  position: absolute;
+  top: -7.9rem;
+  z-index: 11;
+  display: none;
+}
+
+.stories-btn {
+  width: 25px;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: -4.8rem;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 5px #272727ab;
+          box-shadow: 1px 1px 5px #272727ab;
+}
+
+.stories-btn-left {
+  left: 2%;
+}
+
+.stories-btn-right {
+  right: 2%;
+}
+
+.stories-btn-disappear {
+  visibility: hidden;
+  opacity: 0;
 }
 
 #user-recommendations {
@@ -816,7 +812,6 @@ i:active {
     display: block;
     width: 600px;
     left: 50%;
-    top: 5.5rem;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
     visibility: visible;
@@ -842,9 +837,6 @@ i:active {
     margin-right: auto;
     padding-left: 0;
     padding-right: 0;
-  }
-  .stories-buttons-div {
-    left: 35%;
   }
   .sp-box {
     max-width: 924px;

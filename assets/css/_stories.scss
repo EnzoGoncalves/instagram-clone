@@ -20,6 +20,7 @@
     gap: 1.35rem;
 
     .user {
+        position: relative;
         cursor: pointer;
     }
 
@@ -39,41 +40,5 @@
         font-size: 0.7rem;
         text-align: center;
         padding-top: 0.5rem;
-    }
-}
-
-.stories-buttons-div {
-    width: 100%;
-    position: absolute;
-    z-index: 11;
-    display: none;
-
-
-    .stories-btn {
-        width: 30px;
-        height: 30px;
-        @include flex-center(true);
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
-        z-index: 11;
-        background-color: white;
-        color: black;
-        font-size: 1.25rem;
-        border-radius: 50%;
-        box-shadow: 1px 1px 5px #272727ab;
-    }
-
-    .stories-btn-left {
-        left: 4%;
-    }
-
-    .stories-btn-right {
-        right: 4%;
-    }
-
-    .stories-btn-disappear {
-        visibility: hidden;
-        opacity: 0;
     }
 }
