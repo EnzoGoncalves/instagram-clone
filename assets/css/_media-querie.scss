@@ -1,7 +1,5 @@
 @media (min-width: 650px) {
     #header {
-        border-bottom: 1px solid #dbdbdb;
-
         .nav   {
             img {
                 &.instagram-logo {
@@ -54,10 +52,6 @@
                     &-home, &-plus-square-o, &-heart-o, &-compass {
                         display: inline;
                     }
-        
-                    &-plus-square-o {
-                        font-size: 1.75rem;
-                    }
                 }
             }
         }
@@ -75,7 +69,8 @@
 
     #stories {
         margin-top: 0;
-        overflow: hidden
+        overflow: hidden;
+        border-top: 1px solid $grey-border-color;
     }
 
     .stories-btn {
@@ -94,6 +89,12 @@
 
     #navigation-footer {
         display: none;
+    }
+}
+
+@media (min-width: 735px) {
+    #post-options ul {
+        width: 400px;
     }
 }
 

@@ -6,6 +6,7 @@
     width: 100%;
     z-index: 100;
     background-color: white;
+    border-bottom: 1px solid $grey-border-color;
 
     .nav {
         height: $header-height;
@@ -38,6 +39,10 @@
         .icon {
             &-home, &-plus-square-o , &-compass, &-heart-o {
                 display: none;
+            }
+
+            &-plus-square-o {
+                font-size: 1.75rem;
             }
         }
 

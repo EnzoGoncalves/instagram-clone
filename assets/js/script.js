@@ -64,30 +64,49 @@ function storiesScroll() {
     });
 }
 
-// Função de colocar os botões de scroll dos stories no lugar dos stories
-window.onload = function() {
-    const storiesHeight = document.querySelector('#stories').offsetHeight;
-    const storiesButtonDiv = document.querySelector('.stories-buttons-div');
+
+function likeAndSave() {
+    const postHeartIcon = document.querySelectorAll('#posts .interaction div .icon-heart-o');
+    const savePostIcon = document.querySelectorAll('#posts .interaction .icon-bookmark-o');
     
-    storiesButtonDiv.style.height = storiesHeight + 'px';
+    for(const heartIcon of postHeartIcon) {
+        heartIcon.addEventListener('click', function() {
+            heartIcon.classList.toggle('icon-heart');
+        });
+    }
+    
+    for(const saveIcon of savePostIcon) {
+        saveIcon.addEventListener('click', function() {
+            saveIcon.classList.toggle('icon-bookmark');
+        });
+    }
 }
 
+function postOptions() {
+    const buttonsOpenOptions = document.querySelectorAll('.icon-more-horizontal');
+    const options = document.querySelectorAll('.option');
+    const htmlTag = document.querySelector('html');
+    const optionsBox = document.querySelector('#post-options');
 
-const postHeartIcon = document.querySelectorAll('#posts .interaction div .icon-heart-o');
-const savePostIcon = document.querySelectorAll('#posts .interaction .icon-bookmark-o');
+    for(const btnOpenOptions of buttonsOpenOptions) {
+        btnOpenOptions.addEventListener('click', function() {
+            optionsBox.style.display = 'flex';
+            optionsBox.style.top = htmlTag.scrollTop + 'px';
+            htmlTag.style.overflow = 'hidden';
+            htmlTag.style.marginRight = '19px';
+        });
+    }
 
-for(const heartIcon of postHeartIcon) {
-    heartIcon.addEventListener('click', function() {
-        heartIcon.classList.toggle('icon-heart');
-    });
+    for(const option of options) {
+        option.addEventListener('click', function() {
+            htmlTag.style.overflow = 'unset';
+            optionsBox.style.display = 'none';
+            htmlTag.style.marginRight = '0px';
+        });
+    }
 }
-
-for(const saveIcon of savePostIcon) {
-    saveIcon.addEventListener('click', function() {
-        saveIcon.classList.toggle('icon-bookmark');
-    });
-}
-
 
 maxLetters();
 storiesScroll();
+postOptions();
+likeAndSave()

@@ -8,7 +8,9 @@
     position: relative;
     margin-top: $header-height;
     border-top: none;
-    border: 1px solid $grey-border-color;
+    border-left: 1px solid $grey-border-color;
+    border-right: 1px solid $grey-border-color;
+    border-bottom: 1px solid $grey-border-color;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
     overflow-x: scroll;
@@ -41,5 +43,6 @@
         font-size: 0.7rem;
         text-align: center;
         padding-top: 0.5rem;
+        max-width: 54px;
     }
 }
