@@ -83,6 +83,7 @@ function likeAndSave() {
 }
 
 function postOptions() {
+    const header = document.querySelector('#header');
     const buttonsOpenOptions = document.querySelectorAll('.icon-more-horizontal');
     const options = document.querySelectorAll('.option');
     const htmlTag = document.querySelector('html');
@@ -93,7 +94,8 @@ function postOptions() {
             optionsBox.style.display = 'flex';
             optionsBox.style.top = htmlTag.scrollTop + 'px';
             htmlTag.style.overflow = 'hidden';
-            htmlTag.style.marginRight = '19px';
+            htmlTag.style.marginRight = '15px';
+            header.style.paddingRight = '15px';
         });
     }
 
@@ -102,6 +104,7 @@ function postOptions() {
             htmlTag.style.overflow = 'unset';
             optionsBox.style.display = 'none';
             htmlTag.style.marginRight = '0px';
+            header.style.paddingRight = '0';
         });
     }
 }
