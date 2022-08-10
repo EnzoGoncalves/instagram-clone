@@ -1,7 +1,7 @@
 # instagram-clone
 Clone do aplicativo web Instagram
 
-https://enzogoncalves.github.io/instagram-clone/
+Pode visualizar na web através do link https://enzogoncalves.github.io/instagram-clone/
 
 ##
 
